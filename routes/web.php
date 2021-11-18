@@ -19,8 +19,8 @@ Route::get('/', [MyController::class, 'index']);
 Route::get('/store', [MyController::class, 'store']);
 Route::get('/contact', [MyController::class, 'contact']);
 
-Route::get('/admin', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
-Route::post('/admin', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 
 Route::middleware(['auth'])->group(function(){
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
