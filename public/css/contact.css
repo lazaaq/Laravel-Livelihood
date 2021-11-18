@@ -1,0 +1,121 @@
+body {
+    font-family:sans-serif;
+}
+
+header{
+    background-color: #F5E4D9;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+header .black-box {
+    border: 3px #242424 solid;
+    border-radius: 2rem;
+    height: fit-content;
+    padding: 1rem ;
+}
+header .wrap-header .not-dropdown {
+    display: flex;
+}
+header .wrap-header .not-dropdown ul {
+    display: flex;
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+}
+header .wrap-header .not-dropdown ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+header .wrap-header .not-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+header .wrap-header .not-dropdown ul li a:hover {
+    text-decoration: underline;
+    color: #8CB07B;
+    transition: 0.2s;
+}
+header .wrap-header .brand {
+    margin-left: auto;
+    margin-right: 1rem;
+    font-weight: 700;
+}
+header .wrap-header .dropdown {
+    display: none;
+}
+header .wrap-header .dropdown img {
+    width: 30px;
+    height: auto;
+}
+header .wrap-header .dropdown button {
+    background-color: inherit;
+    border: none;
+
+}
+header .wrap-header .dropdown button#tutup-menu {
+    display: none;
+}
+header .wrap-header .dropdown .items#menu {
+    display: none;
+}
+header .wrap-header .dropdown ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+header .wrap-header .dropdown ul li {
+    list-style: none;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+header .wrap-header .dropdown ul li a {
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width: 576px) {
+    header .wrap-header .not-dropdown {
+        display: none;
+    }
+    header .wrap-header .dropdown {
+        display: block;
+    }
+}
+
+
+.contact {
+    background-color: #F5E4D9;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+.contact .judul {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.contact a .image {
+    background-color: #8CB07B;
+    padding: 1rem 2rem ;
+    border-radius: 1rem;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+.contact .image img {
+    width: 30px;
+    height: auto;
+}
+.contact a {
+    text-decoration: none;
+    color: #242424;
+    transition: 0.3s;
+}
+.contact a:hover .image {
+    transition: 0.3s;
+    background-color: #2d2d2d;
+    color: #F5E4D9;
+}
+@media screen and (max-width: 991px) {
+    .contact .image .text {
+        font-size: 1rem;
+    }
+}
