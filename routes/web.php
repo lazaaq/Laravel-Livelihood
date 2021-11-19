@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MyController::class, 'index']);
-Route::get('/store', [MyController::class, 'store']);
+// Route::get('/store', [MyController::class, 'store']);
 Route::get('/contact', [MyController::class, 'contact']);
+Route::get('/product', [MyController::class, 'product']);
 Route::get('/product/{product:slug}', [MyController::class, 'single_product']);
 
 Route::get('/admin', [AuthenticatedSessionController::class, 'create'])->name('login');
@@ -29,7 +30,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
     Route::resource('/dashboard/product', ProductController::class);
 });
-
 
 
 

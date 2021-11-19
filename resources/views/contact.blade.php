@@ -12,7 +12,7 @@
                 <div class="not-dropdown">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/store">Store</a></li>
+                        <li><a href="/product">Product</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                     <div class="brand">livelihood</div>
@@ -27,7 +27,7 @@
                     <div class="items" id="menu">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/store">Store</a></li>
+                            <li><a href="/product">Product</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>

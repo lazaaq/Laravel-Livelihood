@@ -11,13 +11,19 @@ class MyController extends Controller
     {
         return view('index');
     }
-    public function store()
-    {
-        return view('store');
-    }
+    // public function store()
+    // {
+    //     return view('store');
+    // }
     public function contact()
     {
         return view('contact');
+    }
+    public function product()
+    {
+        return view('product.index', [
+            'products' => Product::all()
+        ]);
     }
     public function single_product(Product $product)
     {
