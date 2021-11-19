@@ -7,7 +7,7 @@
 @section('content')
 <section class="content">
     <div class="container">
-        <div class="card card-primary mt-5">
+        <div class="card card-primary my-5">
             <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-header">

@@ -13,7 +13,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
-        <div class="card card-light mt-5">
+        <div class="card card-light my-5">
             <div class="card-header d-flex align-items-center">
                 <div class="fs-4" style="font-weight: 600">Semua Product</div>
                 <div class="ms-auto">

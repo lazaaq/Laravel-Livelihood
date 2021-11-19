@@ -7,7 +7,7 @@
 @section('content')
 <section class="content">
     <div class="container">
-        <div class="card card-light mt-5">
+        <div class="card card-light my-5">
             <div class="card-header">
                 Detail Produk
             </div>
@@ -22,10 +22,26 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-2">
+                        Slug
+                    </div>
+                    <div class="col-md-10">
+                        <b>{{ $product->slug }}</b>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        Link Produk
+                    </div>
+                    <div class="col-md-10">
+                        <b>{{ $product->link }}</b>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-2">
                         Harga Produk
                     </div>
                     <div class="col-md-10">
-                        <b>{{ number_format($product->harga, 0, ',', '.') }}</b>
+                        <b>Rp {{ number_format($product->harga, 0, ',', '.') }}</b>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -44,6 +60,9 @@
                         <img src="{{ asset($product->image) }}" alt="{{ $product->image }}" class="img-thumbnail" style="width:500px">
                     </div>
                 </div>
+            </div>
+            <div class="card-footer">
+                <a href="{{ route('product.index') }}" class="btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>

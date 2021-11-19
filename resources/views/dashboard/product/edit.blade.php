@@ -7,7 +7,7 @@
 @section('content')
 <section class="content">
     <div class="container">
-        <div class="card card-primary mt-5">
+        <div class="card card-primary my-5">
             <form action="{{ route('product.update', $product->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
@@ -37,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Gambar Produk</label>
-                        <img class="img-fluid mb-3 col-sm-5" id="imgPreview" src="{{ $product->image }}">
+                        <img class="img-fluid mb-3 col-sm-5 d-block rounded" id="imgPreview" src="{{ asset($product->image) }}">
                         <input type="file" name="image" id="image" class="d-block form-control" onchange="previewImage()">
                     </div>
                 </div>
