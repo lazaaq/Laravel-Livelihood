@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MyController::class, 'index']);
 Route::get('/store', [MyController::class, 'store']);
 Route::get('/contact', [MyController::class, 'contact']);
+Route::get('/product/{product:slug}', [MyController::class, 'single_product']);
 
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
+Route::get('/admin', [AuthenticatedSessionController::class, 'create'])->name('login');
+Route::post('/admin', [AuthenticatedSessionController::class, 'store']);
 
 Route::middleware(['auth'])->group(function(){
-    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
+    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
+    Route::resource('/dashboard/product', ProductController::class);
 });
 
 
