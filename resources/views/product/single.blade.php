@@ -58,7 +58,7 @@
                 <b>{{ $product->deskripsi }}</b>
             </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-5">
             <a href="{{ $product->link }}" class="btn btn-info text-light" style="width: fit-content">Beli Produk</a>
         </div>
     </div>
