@@ -44,14 +44,6 @@
         </div>
         <div class="row mb-3">
             <div class="col-md-2">
-                Slug Produk
-            </div>
-            <div class="col-md-10">
-                <b>{{ $product->slug }}</b>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-2">
                 Harga Produk
             </div>
             <div class="col-md-10">

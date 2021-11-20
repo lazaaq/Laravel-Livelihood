@@ -9,60 +9,44 @@
     <div class="container">
         <div class="card card-light my-5">
             <div class="card-header">
-                Detail Produk
+                Detail Sertifikat
             </div>
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-md-2">
-                        Nama Produk
+                        Judul Sertifikat
                     </div>
                     <div class="col-md-10">
-                        <b>{{ $product->name }}</b>
+                        <b>{{ $certificate->title }}</b>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-2">
-                        Slug
+                        Slug Sertifikat
                     </div>
                     <div class="col-md-10">
-                        <b>{{ $product->slug }}</b>
+                        <b>{{ $certificate->slug }}</b>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-2">
-                        Link Produk
+                        Deskripsi Sertifikat
                     </div>
                     <div class="col-md-10">
-                        <b>{{ $product->link }}</b>
+                        <b>{{ $certificate->deskripsi }}</b>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-2">
-                        Harga Produk
+                        Gambar Sertifikat
                     </div>
                     <div class="col-md-10">
-                        <b>Rp {{ number_format($product->harga, 0, ',', '.') }}</b>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-2">
-                        Deskripsi Produk
-                    </div>
-                    <div class="col-md-10">
-                        <b>{{ $product->deskripsi }}</b>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-2">
-                        Gambar Produk
-                    </div>
-                    <div class="col-md-10">
-                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="img-thumbnail" style="width:500px">
+                        <img src="{{ asset($certificate->image) }}" alt="{{ $certificate->title }}" class="img-thumbnail" style="width:500px">
                     </div>
                 </div>
             </div>
             <div class="card-footer">
-                <a href="{{ route('product.index') }}" class="btn btn-primary">Kembali</a>
+                <a href="{{ route('certificate.index') }}" class="btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>

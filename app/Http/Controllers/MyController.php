@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Sertificate;
 use Illuminate\Http\Request;
 
 class MyController extends Controller
@@ -29,6 +30,12 @@ class MyController extends Controller
     {
         return view('product.single', [
             'product' => $product
+        ]);
+    }
+    public function single_certificate(Sertificate $sertificate)
+    {
+        return view('certificate.single', [
+            'certificate' => $sertificate
         ]);
     }
 }

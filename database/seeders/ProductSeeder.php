@@ -20,7 +20,7 @@ class ProductSeeder extends Seeder
             'link' => 'www.shopee.com',
             'harga' => '79000',
             'deskripsi' => 'Warna Hitam, Bahan Cotton',
-            'image' => '/img/produk/1/basic-01.jpg'
+            'image' => '/img/produk/basic-01.jpg'
         ]);
     }
 }

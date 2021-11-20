@@ -36,16 +36,18 @@
 </nav>
 <section class="content d-flex align-items-center justify-content-center">
     <div class="container mt-5">
-        @foreach ($products as $product)
-        <div class="card col-lg-4 col-md-6 mb-3">
-            <img src="{{ asset($product->image) }}" class="card-img-top" alt="{{ $product->name }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ $product->name }}</h5>
-              <p class="card-text">{{ $product->deskripsi }}</p>
-              <a href="/product/{{ $product->slug }}" class="btn btn-primary">Lihat Produk</a>
+        <div class="row">
+            @foreach ($products as $product)
+            <div class="card col-lg-4 col-md-6 mb-3">
+                <img src="{{ asset($product->image) }}" class="card-img-top" alt="{{ $product->name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $product->name }}</h5>
+                    <p class="card-text">{{ $product->deskripsi }}</p>
+                    <a href="/product/{{ $product->slug }}" class="btn btn-primary">Lihat Produk</a>
+                </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 </section>
 @endsection
