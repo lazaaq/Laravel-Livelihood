@@ -12,7 +12,7 @@
                 @csrf
                 <div class="card-header">
                     Tambah Produk
-                </div>
+                </div> 
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Produk</label>

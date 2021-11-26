@@ -12,7 +12,7 @@
                 @csrf
                 <div class="card-header">
                     Tambah Sertifikat
-                </div>
+                </div> 
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="title" class="form-label">Judul Sertifikat</label>

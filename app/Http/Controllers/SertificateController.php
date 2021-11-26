@@ -53,7 +53,7 @@ class SertificateController extends Controller
         ]);
 
         $file = $request->file('image');
-        $folder_tujuan = 'img/sertifikat';
+        $folder_tujuan = '/img/sertifikat';
         $filename = time() . '_' . $file->getClientOriginalName();
         $validated['image'] = $file->move($folder_tujuan, $filename);
         
